@@ -14,3 +14,8 @@
 .bg-img05 {
     background: url(./assets/img/small-05.png) no-repeat;
 }
+div {
+    width: 160px;
+    height: 160px;
+    border: 1px solid black;
+}

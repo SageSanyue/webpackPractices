@@ -3,13 +3,13 @@ const HTMLPlugin = require('html-webpack-plugin')
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.js',
-    output: {
-        publicPath: 'http://sage.cdn.com/img/' // 假设这是我们的静态资源线上CDN路径
-    },
+    entry: './src/sprite.js',
+    // output: {
+    //     publicPath: 'http://sage.cdn.com/img/' // 假设这是我们的静态资源线上CDN路径
+    // },
     resolve: {
         alias: {
-            '@assets': path.resolve('./src/assets')
+            '@assets': path.resolve(__dirname, './src/assets')
         }
     },
     module: {
@@ -20,7 +20,13 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                use: [
+                    'style-loader', 
+                    'css-loader',
+                    {
+                        loader: 'postcss-loader'
+                    }
+                ]
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
