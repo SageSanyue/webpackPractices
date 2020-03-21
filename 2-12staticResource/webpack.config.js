@@ -4,6 +4,9 @@ const HTMLPlugin = require('html-webpack-plugin')
 module.exports = {
     mode: 'development',
     entry: './src/index.js',
+    output: {
+        publicPath: 'http://sage.cdn.com/img/' // 假设这是我们的静态资源线上CDN路径
+    },
     resolve: {
         alias: {
             '@assets': path.resolve('./src/assets')
