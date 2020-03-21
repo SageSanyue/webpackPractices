@@ -23,6 +23,19 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.less$/,
+                use: [
+                    MiniCssExtractPlugin.loader, 
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true
+                        }
+                    },
+                    'less-loader'
+                ]
             }
         ]
     },

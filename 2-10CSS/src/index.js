@@ -1,4 +1,7 @@
 import styles from './css/app.css';
+import './css/style.less';
+
+document.write('My Webpack app.<br/>');
 
 function component() {
     var element = document.createElement('div')
