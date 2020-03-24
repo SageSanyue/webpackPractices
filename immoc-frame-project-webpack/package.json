@@ -1,0 +1,34 @@
+{
+  "name": "immoc-frame-project-webpack",
+  "version": "1.0.0",
+  "description": "immoc-webpack部分",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config build-base-conf/webpack.prod.js",
+    "build:dev": "webpack --config build-base-conf/webpack.dev.js",
+    "dev": "webpack-dev-server --config build-base-conf/webpack.dev.js"
+  },
+  "author": "Sage",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.0.1",
+    "url-loader": "^4.0.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "autoprefixer": "^9.7.5",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.4.2",
+    "less": "^3.11.1",
+    "less-loader": "^5.0.0",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^1.1.3"
+  }
+}
