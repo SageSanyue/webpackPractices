@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config build-base-conf/webpack.prod.js",
-    "build:dev": "webpack --config build-base-conf/webpack.dev.js",
-    "dev": "webpack-dev-server --config build-base-conf/webpack.dev.js"
+    "build": "webpack --config build-splitChunks-conf/webpack.prod.js",
+    "build:dev": "webpack --config build-splitChunks-conf/webpack.dev.js",
+    "dev": "webpack-dev-server --config build-splitChunks-conf/webpack.dev.js"
   },
   "author": "Sage",
   "license": "ISC",
@@ -15,9 +15,13 @@
     "clean-webpack-plugin": "^3.0.0",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.0.1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "terser-webpack-plugin": "^2.3.5",
     "url-loader": "^4.0.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
