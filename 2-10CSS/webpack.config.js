@@ -1,6 +1,8 @@
 const path = require('path')
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const TerserJSPlugin = require('terser-webpack-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = {
     entry: './src/index.js',
@@ -65,8 +67,12 @@ module.exports = {
             hash: true, // 会在打包好的bundle.js后面加上hash串
         }),
         new MiniCssExtractPlugin({
-            filename: '[name].css',
+            filename: '[name].[chunkHash:8].css',
             chunkFilename: '[id].css'
         })
-    ]
+    ],
+    optimization: {
+        // 压缩 css
+        minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
+    }
 }
